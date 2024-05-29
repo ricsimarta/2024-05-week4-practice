@@ -52,3 +52,7 @@ function doSomeMagic(number1, number2, callback) {
 
 console.log(doSomeMagic(1, 2, sumOfTwoNumbers));
 console.log(doSomeMagic(1, 2, multiplyTwoNumbers));
+console.log(doSomeMagic(10, 2, (number1, number2) => number1**number2));
+console.log(doSomeMagic(10, 2, function (number1, number2) {
+  return number1**number2
+}));
