@@ -1,58 +1,46 @@
-/* console.log("hello world");
+const data = ["one", "two", "three", "four", "five", "six", "seven"];
 
-helloWorld();
+/* data.forEach((element, index, array) => {
+  console.log(`The ${index}. element of the "${array}" array is: ${element} `)
+}); */
 
-function helloWorld() {
-  console.log("hello world from the function");
-  
-  helperFunction();
+//FOREACH - DO NOT HAVE RETURN VALUE --> UNDEFINED
+/* const newData = [];
+const result = data.forEach(element => newData.push(`new${element}`));
+console.log(newData); */
 
-  function helperFunction() {
-    console.log("i am helping");
-  }
-  
-  const functionVariable = "text"
-  console.log(functionVariable);
-}
+//MAP - ALWAYS HAS RETURN VALUE --> ARRAY WITH SAME LENGTH AS ORIGINAL ARRAY
+/* data.map(element => `new${element}`);
+console.log(result); */
 
-console.log("hello world 2");
+/* const result = data.filter(element => element.length > 3);
+console.log(result); */
 
-const coolerHelloWorld = function() {
-  console.log("hello world from the cooler function");
-}
+// const result = data.reduce((prev, curr) => prev + curr, "jeghidegmitiszol");
+/* 
+1. prev: "jeghidegmitiszol"
+curr: "one"
+cb: prev + curr -> "jeghidegmitiszol" + "one" -> "jeghidegmitiszolone"
 
-coolerHelloWorld();
+2. prev: "jeghidegmitiszolone"
+curr: "two"
+cb: prev + curr -> "jeghidegmitiszolone" + "two" -> "jeghidegmitiszolonetwo"
 
-const coolestHelloWorld = () => {
-  console.log("hello world from the coolest function");
-}
+*/
+// console.log(result)
 
-coolestHelloWorld(); */
+// const result = data.reduce((prev, curr) => prev + curr);
+/* 
+1. prev: "one"
+   curr: "two"
+   cb: prev + curr -> "one" + "two" -> "onetwo"
 
-function sumOfTwoNumbers(number1, number2) {
-  return number1 + number2;
-}
+2. prev: "onetwo"
+   curr: "three"
+   cb: prev + curr -> "onetwo" + "three" -> "onetwothree"
+*/
+// console.log(result);
 
-function multiplyTwoNumbers(number1, number2) {
-  return number1 * number2;
-}
 
-/* const result = sumOfTwoNumbers(5, 10);
-console.log("result: ", result); */
-
-/* console.log(sumOfTwoNumbers(20, 2));
-
-const arrowSumOfTwoNumbers = (number1, number2) => number1 + number2;
-
-console.log(arrowSumOfTwoNumbers(1, 2)); */
-
-function doSomeMagic(number1, number2, callback) {
-  return callback(number1, number2);
-}
-
-console.log(doSomeMagic(1, 2, sumOfTwoNumbers));
-console.log(doSomeMagic(1, 2, multiplyTwoNumbers));
-console.log(doSomeMagic(10, 2, (number1, number2) => number1**number2));
-console.log(doSomeMagic(10, 2, function (number1, number2) {
-  return number1**number2
-}));
+const result = data.find(element => element.length > 3);
+console.log(result);
